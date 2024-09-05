@@ -496,6 +496,10 @@ let
       && (if config.checkMetaRecursively or false
       then all (d: d.meta.available or true) references
       else true);
+    } // optionalAttrs inHydra {
+      description = lib.concatStringsSep " "
+        ((lib.optional (attrs ? meta.description) attrs.meta.description)
+          ++ (lib.map (feature: "?feature=${feature}") (attrs.meta.requiredSystemFeatures or [])));
     };
 
   assertValidity = { meta, attrs }: let

@@ -152,4 +152,7 @@ in
   xkeyboard_config = linux;
   zip = all;
   tests-stdenv-gcc-stageCompare = all;
-} ))
+} )) // {
+  _feat = mapTestOn {
+  };
+}
