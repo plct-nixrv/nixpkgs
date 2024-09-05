@@ -154,5 +154,6 @@ in
   tests-stdenv-gcc-stageCompare = all;
 } )) // {
   _feat = mapTestOn {
+    libuv = all;
   };
 }

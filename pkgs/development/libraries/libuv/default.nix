@@ -123,6 +123,7 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers = [ ];
     platforms   = platforms.all;
     license     = with licenses; [ mit isc bsd2 bsd3 cc-by-40 ];
+    requiredSystemFeatures = [ "no-qemu-user" ];
   };
 
 })
