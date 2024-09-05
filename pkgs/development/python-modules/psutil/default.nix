@@ -73,5 +73,6 @@ buildPythonPackage rec {
     changelog = "https://github.com/giampaolo/psutil/blob/release-${version}/HISTORY.rst";
     license = licenses.bsd3;
     maintainers = [ ];
+    requiredSystemFeatures = [ "no-qemu-user" ];
   };
 }
