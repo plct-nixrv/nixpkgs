@@ -52,5 +52,6 @@ stdenv.mkDerivation rec {
       "sparc64-linux"
     ];
     maintainers = with maintainers; [ thoughtpolice ];
+    requiredSystemFeatures = [ "no-qemu-user" ];
   };
 }

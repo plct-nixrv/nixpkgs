@@ -156,5 +156,6 @@ in
   _feat = mapTestOn {
     libuv = all;
     python3Packages.psutil = all;
+    libseccomp = all;
   };
 }
