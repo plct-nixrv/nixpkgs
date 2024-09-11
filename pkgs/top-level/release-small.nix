@@ -157,5 +157,6 @@ in
     libuv = all;
     python3Packages.psutil = all;
     libseccomp = all;
+    elfutils = all;
   };
 }

@@ -108,5 +108,6 @@ stdenv.mkDerivation rec {
     # but since this package isn't split that way, all three are listed.
     license = with licenses; [ gpl2Only lgpl3Plus gpl3Plus ];
     maintainers = with maintainers; [ r-burns ];
+    requiredSystemFeatures = [ "no-qemu-user" ];
   };
 }
