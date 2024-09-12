@@ -39,5 +39,9 @@ stdenv.mkDerivation rec {
     license = licenses.mpl20;
     platforms = platforms.all;
     maintainers = with maintainers; [ fpletz ];
+
+    # Fails at configuration detection, somehow ZMQ_CACHELINE_SIZE ends up as
+    # undefined instead of a number
+    requiredSystemFeatures = [ "no-qemu-user" ];
   };
 }
